@@ -1,7 +1,4 @@
-RegisterServerEvent('DiceChatMessage')
-AddEventHandler('DiceChatMessage', function(id, number)
 
-end)
 
 RegisterCommand("dice", function(source, args)
     -- 6 sided dice
@@ -31,3 +28,9 @@ RegisterCommand("dice", function(source, args)
     end
     
 end)
+
+function notify(text)
+    SetNotificationTextEntry("STRING")
+    AddTextComponentString(text)
+    DrawNotification(false, false)
+end
